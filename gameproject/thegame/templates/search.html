@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} Search {% endblock %}
+{% block content %}
+
+<div class="next">
+    {% if searched %}
+    <h1>You are searching for {{ searched }}</h1>
+    <br>
+    {% for productDetail in searching %}
+    <div class="col-12 col-md-6 find">
+        <img src="{{productDetail.product_image.url}}" class="img-fluid">
+        <h1>{{productDetail.product_name}}</h1>
+        <h5>{{productDetail.product_price}} EUR</h5>
+          <a href="../product/{{productDetail.product_id}}" id="buy" class="button">Read More</a>
+      </div>
+    {% endfor %}
+
+    {% else %}
+    <h1>Sorry, we couldn't find the product you are looking for.</h1>
+    {% endif %}
+
+    
+</div>
+
+
+{% endblock %}

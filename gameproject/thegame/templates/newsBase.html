@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} News Base {% endblock %}
+{% block content %}
+
+<!--- News Base--->
+
+<div class="container">
+  <h2 class="tittle">News</h2>
+  <div class="row">
+    {% for newsBases in newsBase %}
+    <div class="col-6">
+      <img src="{{newsBases.newsBase_image.url}}">
+      <a href="../newsBases/{{newsBases.newsBase_id}}"> 
+          <h3><u>{{newsBases.newsBase_name}}</u></h3> </a> <br>
+      <p>As Modern Warfare 2 struggles with bugs and issues following release,
+          PlayStation announces the entry has had the best ever launch for the series.</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

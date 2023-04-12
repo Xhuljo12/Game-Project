@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} Product {% endblock %}
+{% block content %}
+
+<!--- Product --->
+
+<div class="container text-center">
+    <h2 class="tittle">Product</h2>
+</div>  
+
+<!--- Single Product Details --->
+
+<div id="postcard" class="card mb-3" style="width: 70%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{productDetail.product_image.url}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title">{{productDetail.product_name}}</h2>
+        <p class="card-text"></p>
+        <h4>Product Details</h4>
+        <p> {{productDetail.product_description}}
+        </p>
+        <h3>{{productDetail.product_price}} EUR</h3>
+        <a href="#" id="buy">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

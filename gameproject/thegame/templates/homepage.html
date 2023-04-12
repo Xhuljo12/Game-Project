@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+
+
+<!-- Header -->
+
+<div class="container">
+ <div class="row">
+  <div class="col-1">
+    <h1 id="text">Enjoy your gaming<br>experience!</h1>
+    <p>Whether you are a rush player, a brave fighter,<br>
+     a strategic thinker or a fearless player,<br>we invite you to be part of this Game Project!</p>
+     <input type="button" onclick="change(), changeText()" id="Play" value="Let's Play">
+
+  </div>
+  <div class="col-2">
+     <img id="DarkKnight" src="{% static 'images/onion.png' %}" width="400px" height="500px">
+  </div>
+ </div>
+</div>
+
+<!--- Brands --->
+
+<div class="brands">
+  <div class="container">
+      <h2 class="tittle">Brands</h2>
+    <div class="row">
+      <div class="col-3">
+         <a href="https://www.playstation.com/en-us/" target="_blank"> <img src="{% static 'images/PlayStation-Logo.wine.png' %}" width="300px"> </a>
+      </div>
+      <div class="col-3">
+          <a href="https://www.xbox.com/en-US/" target="_blank"> <img src="{% static 'images/Xboxlogo.png' %}" width="300px"> </a>
+      </div>
+      <div class="col-3">
+          <a href="https://www.nintendo.com/" target="_blank"> <img src="{% static 'images/NintendoLogo.png' %}" width="300px"> </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--- Products --->
+
+<div class="container text-center">
+  <h2 class="tittle">Products</h2>
+  <div class="row align-items-start">
+    {% for productBases in productBase %}
+    <div class="col-md-4">
+        <img src="{{productBases.productBase_image.url}}" width="300px" height="250px" id="controller">
+        <h4>{{productBases.productBase_name}}</h4>
+        <H6>{{productBases.productBase_price}} EUR</H6>
+        <a href="../productBases/{{productBases.productBase_id}}" id="buy" class="button">View details</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+  <!--- New Product --->
+<div class="container text-center">
+  <div class="new-product">
+    <div class="small-container">
+       <div class="row">
+        <div class="col-md-4">
+            <p>Our new product</p>
+            <h1>Play Station 5 Controller</h1>
+            <small>Discover a deeper gaming experience with the innovative new PS5™ controller.</small><br>
+           </div>
+          <div class="col-md-4">
+              <img src="{% static 'images/Ps5joywhite.png' %}" width="250px">
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+  <!------- News ------>
+
+  <div class="container">
+    <h2 class="tittle">News</h2>
+    <div class="row">
+      {% for newsBases in newsBase %}
+      <div class="col-6">
+        <img src="{{newsBases.newsBase_image.url}}">
+        <a href="../newsBases/{{newsBases.newsBase_id}}"> 
+            <h3><u>{{newsBases.newsBase_name}}</u></h3> </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

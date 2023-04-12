@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} News {% endblock %}
+{% block content %}
+
+<!--- News --->
+
+<div class="container">
+  <h2 class="tittle">News</h2>
+  <div class="row">
+    {% for newsDetails in news %}
+    <div class="col-6">
+      <img src="{{newsDetails.news_image.url}}">
+      <a href="../newsDetails/{{newsDetails.news_id}}"> 
+          <h3><u>{{newsDetails.news_name}}</u></h3> </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} Product Basess {% endblock %}
+{% block content %}
+
+<!--- Product Bases--->
+
+<div class="container text-center">
+    <h2 class="tittle">Product</h2>
+</div>  
+
+<!--- Single Product Details --->
+
+<div id="postcard" class="card mb-3" style="width: 70%;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{productBasesDetail.productBase_image.url}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h2 class="card-title">{{productBasesDetail.productBase_name}}</h2>
+        <p class="card-text"></p>
+        <h4>Product Details</h4>
+        <p> {{productBasesDetail.productBase_description}}
+        </p>
+        <h3>{{productBasesDetail.productBase_price}} EUR</h3>
+        <a href="#" id="buy">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,360 @@
+body {
+    font-family: 'Games', sans-serif;
+    background-image: linear-gradient(to left top, #d4d6b4, #c3c5a6, #b2b399, #a1a38c, #91927f, #939482, #959684, #979887, #acad9b, #c1c2af, #d7d7c3, #ededd8);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+/*---Navigation---*/
+
+.navbar {
+    background-image: linear-gradient(to right bottom, #fcfafb, #e7e4e7, #d2cfd3, #bcbac0, #a5a6ae, #91949c, #7d838b, #697279, #555f63, #434c4f, #32393b, #222828);
+   
+}
+.d-flex {
+    width: 200px;
+    height: 40px;
+}
+
+/*---Header---*/
+
+.container {
+    margin-top: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.col-1 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 20px 0;
+}
+
+.col-2 img:hover {
+    transform: translateX(-50px);
+    transition: transform 1s;
+}
+
+.col-1 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+#Play {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+#Play:hover {
+    background: green;
+}
+
+/*---Brands---*/
+
+.tittle {
+    text-align: center;
+    margin: 50px 80px;
+    position: relative;
+    line-height: 60px;
+}
+
+.tittle::after {
+    content: "     ";
+    background: black;
+    width: 800px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.brands {
+    margin: 50px 0;
+    justify-content:space-evenly;
+}
+
+.col-3 img {
+    width: 100%;
+}
+
+/*---Responsive---*/
+
+@media screen and (max-width:850px){
+
+    .tittle::after{
+        width: 300px;
+    }
+    .col-3 img {
+        width: 150%;
+    }
+    #loading {
+        width: 300px;
+        margin-left: 0px !important;
+    }
+    #postcard {
+        margin-left: 50px !important;
+    }
+}
+
+/*---Products---*/
+
+.col-md-4 {
+    flex-basis: 30%;
+}
+
+#buy {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+#buy:hover {
+    background: green;
+}
+
+#postcard {
+    margin-left: 180px;
+}
+
+#pro {
+    width: 200px;
+}
+
+.paginator {
+    padding-left: 500px;
+}
+
+#buy-two {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 8px 30px;
+    margin-top: 50px;
+    margin-left: 10px;
+    border-radius: 20px;
+    transition: background 0.5s;
+}
+
+#buy-two:hover {
+    background: green;
+}
+
+/*---New Product---*/
+
+.new-product {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px; 
+    background-image: radial-gradient(circle, #a8881e, #b5961c, #c2a41a, #cfb317, #dbc212, #dac311, #dac30f, #d9c40e, #cbb610, #bda812, #b09a12, #a28d13);
+}
+
+/*---News---*/
+
+.col-6 {
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 0px; 
+    
+}
+
+h3 {
+    color: black;
+}
+
+.col-6 img {
+    width: 200px;
+    height: 200px;
+}
+
+/*---News Details---*/
+
+#flash {
+    padding: 10px;
+}
+
+/*---Footer---*/
+
+.Footer {
+    padding: 60px 0 20px;
+    justify-content: space-evenly;
+}
+
+.footer-col {
+    margin-top: 30px;
+    min-width: 300px;
+    margin-bottom: 20px;
+    text-align: center;
+    flex-basis: 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.footer-column1, .footer-column3, .footer-column4 {
+    line-height: 30px;
+}
+
+.Footer hr {
+    background: black;
+    height: 1;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+/*---About Us---*/
+
+#about {
+    margin: 20px;
+    padding: 10px;
+}
+
+/*---Contact---*/
+
+.form-container {
+    background: whitesmoke;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+
+.form-container form {
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+
+form #input2 {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid black; 
+}
+
+#LoginForm {
+    left: -300px;
+}
+
+#RegisterForm {
+    left: 0;
+}
+
+form #forget {
+    font-size: 12px;
+}
+
+#Indicator {
+    width: 100px;
+    border: none;
+    background: green;
+    height: 3px;
+    margin-top: 8px;
+    margin-left: 50px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+
+#loading {
+    margin-left: -160px;
+}
+
+
+
+/*---Thank You---*/
+
+#thanks {
+    width: 100%;
+}
+
+#soon {
+    margin-left: 20%;
+}
+
+/*---Under Maintenance---*/
+
+#manteinance {
+    width: 100%;
+    margin-bottom: -10%;
+}
+
+/*---Search---*/
+
+.next {
+    text-align: center;
+    margin-top:10px;
+    padding: 25px;
+}
+
+.find {
+    text-align: center;
+    padding: 15px;
+    margin-left: 300px;
+}
+
+@media screen and (max-width:850px) {
+    .find {
+        margin-left: 10px;
+    }
+}
+
+.find img {
+    width: 300px;
+}

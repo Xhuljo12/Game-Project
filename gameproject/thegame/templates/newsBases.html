@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+{% block title %} News Bases {% endblock %}
+{% block content %}
+
+<!--- News Bases --->
+
+<h2  class="tittle">News Details</h2>
+<div id="postcard" class="card mb-3" style="width: 70%;">
+    <div class="row g-0">  
+<h2 id="flash">{{newsBasesDetail.newsBase_name}}</h2>
+<p id="flash"> {{newsBasesDetail.newsBase_description}}</p>
+<img src="{{newsBasesDetail.newsBase_image.url}}" width="400px">
+    </div>
+</div> 
+
+{% endblock %}
